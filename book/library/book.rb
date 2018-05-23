@@ -13,7 +13,6 @@ module Library
       raise ArgumentError, 'Book should have an author' if author.empty?
 
       distribute_to_pages(lines)
-      @bookmarked_pages = []
       @name = name
       @author = author
       @at_page = 1
