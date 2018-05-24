@@ -67,7 +67,7 @@ module Library
       @pages = {}
       page_count = 1
       page_text = ''
-      
+
       lines.each do |line|
         line.split.each do |word|
           if page_text.size + word.size > PAGE_LENGTH
