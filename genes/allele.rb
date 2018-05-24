@@ -7,10 +7,4 @@ class Allele
     @mendelian_trate_name = mendelian_trate_name
     @allele_type = allele_type
   end
-
-  def combine(allele)
-    raise ArgumentError, 'Cannot combine different mendelian trates' if allele.mendelian_trate_name <> @mendelian_trate_name
-    
-    # Generic code for gene combination
-  end
 end
