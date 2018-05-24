@@ -1,7 +1,7 @@
 # A class for combining genes of two partners
 class GeneCombination
   attr_reader :father_gene, :mother_gene
-  
+
   def initialize(father_gene, mother_gene)
     @father_gene = father_gene
     @mother_gene = mother_gene

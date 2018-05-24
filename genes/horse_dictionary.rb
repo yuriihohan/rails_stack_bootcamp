@@ -25,6 +25,6 @@ class HorseDictionary
   end
 
   def get_breed_name(horse_breed)
-    @hash.find{ |key, hash| hash == horse_breed }
+    @hash.find { |_key, hash| hash == horse_breed }
   end
 end

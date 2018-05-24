@@ -16,8 +16,8 @@ class HorseBreed
       raise ArgumentError, 'Cannot combine different mendelian trates'
     end
 
-    [Mendel_Law.combine(@a_allele, partner.a_allele),
-     Mendel_Law.combine(@t_allele, partner.t_allele)]
+    [MendelLaw.combine(@a_allele, partner.a_allele),
+     MendelLaw.combine(@t_allele, partner.t_allele)]
   end
 
   def ==(other)
@@ -27,5 +27,4 @@ class HorseBreed
   end
 
   alias eql? ==
-
 end
