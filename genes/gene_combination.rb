@@ -8,7 +8,7 @@ class GeneCombination
   end
 
   def ==(other)
-    self.class === other &&
+    other.is_a?(GeneCombination) &&
       other.father_gene == @father_gene &&
       other.mother_gene == @mother_gene
   end

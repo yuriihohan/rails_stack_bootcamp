@@ -21,7 +21,7 @@ class HorseBreed
   end
 
   def ==(other)
-    self.class === other &&
+    other.is_a?(HorseBreed) &&
       other.a_allele.allele_type == @a_allele.allele_type &&
       other.t_allele.allele_type == @t_allele.allele_type
   end
