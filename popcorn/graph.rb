@@ -31,7 +31,7 @@ class Graph
     r.assign_adjacency([p1, o1, o2, n])
     o2.assign_adjacency([p2, o1, r, c2, c1, n])
     n.assign_adjacency([p1, r, o2, c1])
-    c1.assign_adjacency([n, c1, c2])
+    c1.assign_adjacency([n, o2, c2])
     Graph.new([p1, o1, p2, r, o2, n, c1, c2])
   end
 end

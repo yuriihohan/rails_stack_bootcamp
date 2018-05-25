@@ -22,4 +22,5 @@ words.each do |word|
   end
 end
 
+puts "Total Number of words #{words.size}"
 puts 'true' if words.map(&:to_s).include?('popcorn')
