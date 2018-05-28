@@ -2,7 +2,7 @@ require 'rubygems'
 require 'active_support/inflector'
 
 # Utilitity which provides human readable durations for seconds
-class Duration
+class HumanizedDuration
   IN_MINUTE = 60
   IN_HOUR = IN_MINUTE * 60
   IN_DAY = IN_HOUR * 24
@@ -30,17 +30,17 @@ class Duration
     humanize_part(seconds_left, IN_SECOND, 'Seconds', ' and')
   end
 
-  private def humanize_part(seconds_left, interval_length, label, separator = ',')
-    if seconds_left / interval_length > 0
-      units = seconds_left / interval_length
-      @humanized_string = concat_string @humanized_string, (pluralize_with_label units, label), separator
-      seconds_left -= (seconds_left / interval_length) * interval_length
+  private def humanize_part(seconds, unit_length, unit_label, separator = ',')
+    unit_length, seconds = seconds.divmod(unit_length)
+    if unit_length > 0
+      @humanized_string = concat_string(@humanized_string, pluralize_with_label(unit_length, unit_label), separator)
     end
-    seconds_left
+
+    seconds
   end
 
-  private def pluralize_with_label(units, label)
-    "#{units} #{units > 1 ? label.pluralize : label}"
+  private def pluralize_with_label(unit, unit_label)
+    "#{unit} #{unit_label.pluralize(unit)}"
   end
 
   private def concat_string(accumulator, part, separator)
