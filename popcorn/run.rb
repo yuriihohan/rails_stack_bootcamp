@@ -1,26 +1,26 @@
 require './node'
 require './graph'
-require './word'
+require './word_chain'
 
 words = []
+chains = []
 graph = Graph.build
 
-start_node = graph.start_node
-start_node.adjacent.each do |node|
-  arr = [start_node, node]
-  word = Word.new(arr)
-  words << word
+graph.nodes.each do |node|
+  chains << WordChain.new([node])
 end
 
-words.each do |word|
-  current_letter = word.current_letter
+chains.each do |chain|
+  current_letter = chain.current_letter
+
   current_letter.adjacent.each do |adjacent|
-    unless word.nodes.include?(adjacent)
-      new_word = Word.new(word.nodes + [adjacent])
-      words << new_word
-    end
+    next if chain.nodes.include?(adjacent)
+
+    new_chain = WordChain.new(chain.nodes + [adjacent])
+    chains << new_chain
+
+    words << new_chain.to_s if new_chain.word? and !words.include?(new_chain.to_s)
   end
 end
 
-puts "Total Number of words #{words.size}"
-puts 'true' if words.map(&:to_s).include?('popcorn')
+puts words

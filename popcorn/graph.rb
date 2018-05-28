@@ -6,12 +6,9 @@
 #   N-C
 #
 class Graph
-  attr_reader :nodes, :start_node
+  attr_reader :nodes
   def initialize(nodes)
-    @start_node = Node.new('')
-    @start_node.assign_adjacency(nodes)
-    @nodes = []
-    @nodes << nodes
+    @nodes = nodes
   end
 
   def self.build
