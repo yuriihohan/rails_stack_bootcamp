@@ -19,7 +19,7 @@ chains.each do |chain|
     new_chain = WordChain.new(chain.nodes + [adjacent])
     chains << new_chain
 
-    words << new_chain.to_s if new_chain.word? and !words.include?(new_chain.to_s)
+    words << new_chain.to_s if new_chain.word? && !words.include?(new_chain.to_s)
   end
 end
 
