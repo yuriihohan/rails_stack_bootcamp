@@ -1,4 +1,14 @@
 TodoApp::Application.routes.draw do
+  root to: 'task#list'
+
+  get "task/list"
+
+  get "task/create"
+
+  get "task/edit"
+
+  get "task/delete"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

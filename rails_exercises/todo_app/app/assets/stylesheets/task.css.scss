@@ -1,0 +1,13 @@
+// Place all the styles related to the task controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.done{
+  text-decoration: line-through;
+}
+.task-title {
+  width: 30%;
+  float: left;
+}
+.task_body {
+  margin-bottom: 1em;
+}

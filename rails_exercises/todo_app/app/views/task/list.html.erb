@@ -1,0 +1,13 @@
+<h1>ALL TASKS</h1>
+ 
+<ul>
+   <% @tasks.each do |task| %>
+    <li>
+      <div class="task_body">
+        <span class="task_title <%= ' done' if task.completed != nil %>"> <%= task.title %></span>
+        <span class="task_note"> (<%= task.note %>) </span>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
