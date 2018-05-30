@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+tasks = Task.create([{title: 'Complete to Do app', note: 'Follow best practices'}, 
+                     {title: 'Complete Article app', note: 'Consider using Redis'}])
