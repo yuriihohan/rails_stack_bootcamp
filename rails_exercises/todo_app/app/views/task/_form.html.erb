@@ -1,0 +1,14 @@
+<%= form_for :task, url: { action: "create" } do |f| -%>
+  <%= f.hidden_field :id %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'input-xxlarge' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_field :note, class: 'input-xxlarge' %>
+  </div>
+
+  <%= f.submit 'Save Task', :class => 'btn primary' %>
+<% end %>

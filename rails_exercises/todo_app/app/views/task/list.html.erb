@@ -1,5 +1,8 @@
 <h1>ALL TASKS</h1>
- 
+
+<div class="links">
+  <%= link_to "Add Task", :controller => :task, :action => :new %>
+</div>
 <ul>
    <% @tasks.each do |task| %>
     <li>
