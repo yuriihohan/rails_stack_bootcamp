@@ -1,6 +1,5 @@
 class TaskController < ApplicationController
-  
-  before_filter :set_todo_list, only: [:edit, :update, :destroy]
+  before_filter :set_task, only: [:edit, :update, :delete_confirmation]
   
   # GET /tasks/list
   def list
@@ -30,9 +29,16 @@ class TaskController < ApplicationController
   # PUT /tasks/1
   def update
   end
+  
+  # GET /tasks/1/delete_confirmation
+  def delete_confirmation
+  end
 
   # DELETE /tasks/1
   def delete
+    Task.destroy(params[:task][:id])
+    
+    redirect_to action: 'list', notice: 'Task was successfully created.'
   end
 
   private
@@ -41,7 +47,6 @@ class TaskController < ApplicationController
     end
 
     def task_params
-      puts params
       params.require(:task).permit(:title, :note)
     end
 end

@@ -7,11 +7,13 @@ TodoApp::Application.routes.draw do
 
   get "task/edit"
 
+  get "task/delete_confirmation"
+
   post "task/create"
 
-  put "task/update"
-  
-  delete "task/delete"
+  post "task/update"
+
+  post "task/delete"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
