@@ -1,17 +1,17 @@
 TodoApp::Application.routes.draw do
   root to: 'task#list'
 
-  get "task/list"
+  get 'task/list'
 
-  get "task/new"
+  get 'task/new'
 
-  get "task/edit"
+  get 'task/edit'
 
-  get "task/delete_confirmation"
+  get 'task/delete_confirmation'
 
-  post "task/save"
+  post 'task/save'
 
-  post "task/delete"
+  post 'task/delete'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

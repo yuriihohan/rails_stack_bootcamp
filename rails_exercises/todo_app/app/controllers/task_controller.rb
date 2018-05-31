@@ -1,6 +1,6 @@
 class TaskController < ApplicationController
   before_filter :set_task, only: [:edit, :delete_confirmation]
-  
+
   # GET /tasks/list
   def list
     @tasks = Task.all
@@ -12,12 +12,10 @@ class TaskController < ApplicationController
   end
 
   # GET /tasks/1/edit
-  def edit
-  end
+  def edit; end
 
   # GET /tasks/1/delete_confirmation
-  def delete_confirmation
-  end
+  def delete_confirmation; end
 
   # POST /tasks
   def save
@@ -43,11 +41,12 @@ class TaskController < ApplicationController
   end
 
   private
-    def set_task
-      @task = Task.find(params[:id])
-    end
 
-    def task_params
-      params.require(:task).permit(:title, :note)
-    end
+  def set_task
+    @task = Task.find(params[:id])
+  end
+
+  def task_params
+    params.require(:task).permit(:title, :note)
+  end
 end
