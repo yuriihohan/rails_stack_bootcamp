@@ -9,9 +9,7 @@ TodoApp::Application.routes.draw do
 
   get "task/delete_confirmation"
 
-  post "task/create"
-
-  post "task/update"
+  post "task/save"
 
   post "task/delete"
 

@@ -1,5 +1,5 @@
 class TaskController < ApplicationController
-  before_filter :set_task, only: [:edit, :update, :delete_confirmation]
+  before_filter :set_task, only: [:edit, :delete_confirmation]
   
   # GET /tasks/list
   def list
@@ -15,23 +15,24 @@ class TaskController < ApplicationController
   def edit
   end
 
-  # POST /tasks
-  def create
-    @task = Task.new(params[:task])
+  # GET /tasks/1/delete_confirmation
+  def delete_confirmation
+  end
 
-    if @task.save
+  # POST /tasks
+  def save
+    if params[:task][:id].nil? || params[:task][:id] == ''
+      task = Task.new(params[:task])
+    else
+      task = Task.find(params[:task][:id])
+      task.update_attributes(params[:task])
+    end
+
+    if task.save
       redirect_to action: 'list', notice: 'Task was successfully created.'
     else
       render :new
     end
-  end
-
-  # PUT /tasks/1
-  def update
-  end
-  
-  # GET /tasks/1/delete_confirmation
-  def delete_confirmation
   end
 
   # DELETE /tasks/1
