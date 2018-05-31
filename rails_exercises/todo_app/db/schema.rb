@@ -1,5 +1,4 @@
 # encoding: UTF-8
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,9 +12,12 @@
 # It's strongly recommended to check this file into your version control system.
 
 ActiveRecord::Schema.define(:version => 20180530090540) do
-  create_table 'tasks', :force => true do |t|
-    t.string 'title', :null => false
-    t.text 'note'
-    t.date 'completed'
+
+  create_table "tasks", :force => true do |t|
+    t.string "title",          :null => false
+    t.text   "note"
+    t.date   "dueDate",        :null => false
+    t.date   "completionDate"
   end
+
 end

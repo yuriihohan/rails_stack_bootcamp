@@ -7,8 +7,9 @@
    <% @tasks.each do |task| %>
     <li>
       <div class="task_body">
-        <span class="task_title <%= ' done' if task.completed != nil %>"> <%= task.title %></span>
+        <span class="task_title <%= ' done' if task.completionDate != nil %>"> <%= task.title %></span>
         <span class="task_note"> (<%= task.note %>) </span>
+        <strong> </strong>
         <span class = "ud-icons">
           <%= link_to "<i class='far fa-edit'></i>".html_safe, :controller => :task, :action => :edit, :id => task.id %>
           <%= link_to "<i class='fas fa-trash'></i>".html_safe, :controller => :task, :action => :delete_confirmation, :id => task.id  %>
