@@ -9,6 +9,10 @@
       <div class="task_body">
         <span class="task_title <%= ' done' if task.completed != nil %>"> <%= task.title %></span>
         <span class="task_note"> (<%= task.note %>) </span>
+        <span class = "ud-icons">
+          <i class="far fa-edit"></i>
+          <i class="fas fa-trash"></i>
+        </span>
       </div>
     </li>
   <% end %>
