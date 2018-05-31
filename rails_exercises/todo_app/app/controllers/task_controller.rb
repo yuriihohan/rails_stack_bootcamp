@@ -8,7 +8,7 @@ class TaskController < ApplicationController
 
   # GET /tasks/new
   def new
-    @todo_list = Task.new
+    @task = Task.new
   end
 
   # GET /tasks/1/edit
@@ -20,24 +20,24 @@ class TaskController < ApplicationController
   # POST /tasks
   def save
     if params[:task][:id].nil? || params[:task][:id] == ''
-      task = Task.new(params[:task])
+      @task = Task.new(task_params)
     else
-      task = Task.find(params[:task][:id])
-      task.update_attributes(params[:task])
+      @task = Task.find(params[:task][:id])
+      @task.update_attributes(task_params)
     end
 
-    if task.save
-      redirect_to action: 'list', notice: 'Task was successfully created.'
+    if @task.save
+      redirect_to action: 'list'
     else
       render :new
     end
   end
 
-  # DELETE /tasks/1
+  # POST /tasks/1
   def delete
     Task.destroy(params[:task][:id])
     
-    redirect_to action: 'list', notice: 'Task was successfully created.'
+    redirect_to action: 'list'
   end
 
   private
@@ -47,6 +47,6 @@ class TaskController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :note)
+    params[:task]
   end
 end
