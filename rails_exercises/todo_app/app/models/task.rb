@@ -8,4 +8,8 @@ class Task < ActiveRecord::Base
   def due_date_cannot_be_in_the_past
     errors.add(:dueDate, 'Tasks can be done only in the future') if dueDate.present? && dueDate < Date.today
   end
+
+  def days_left
+    (self.dueDate - Date.today).to_i
+  end
 end

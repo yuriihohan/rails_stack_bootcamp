@@ -6,13 +6,17 @@
 <ul>
    <% @tasks.each do |task| %>
     <li>
-      <div class="task_body">
+      <div class="task_body <%= due_date_class task%>">
         <%= link_to "<i class='far fa-circle'></i>".html_safe, {:controller => :task, :action => :complete, :id => task.id,}, 
                                                                 :class => 'completeTaskBtn' if task.completionDate.nil? %>
         <%= "<i class='far fa-check-circle'></i>".html_safe unless task.completionDate.nil? %>
-        <span class="task_title <%= ' done' if task.completionDate != nil %>"> <%= task.title %></span>
-        <span class="task_note"> (<%= task.note %>) </span>
-        <strong> </strong>
+        <div class ="taskBox">
+          <span class="task_title <%= ' done' if task.completionDate != nil %>"> <%= task.title %></span>
+          <span class="task_note"> (<%= task.note %>) </span>
+        </div>
+        <div class = "dueDateBox">
+          <strong> (<%= task.dueDate %>) </strong>
+        </div>
         <span class = "ud-icons">
           <%= link_to "<i class='far fa-edit'></i>".html_safe, :controller => :task, :action => :edit, :id => task.id %>
           <%= link_to "<i class='fas fa-trash'></i>".html_safe, :controller => :task, :action => :delete_confirmation, :id => task.id  %>
