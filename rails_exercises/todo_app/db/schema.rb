@@ -12,10 +12,12 @@
 # It's strongly recommended to check this file into your version control system.
 
 ActiveRecord::Schema.define(:version => 20180530090540) do
-  create_table 'tasks', :force => true do |t|
-    t.string 'title', :null => false
-    t.text   'note'
-    t.date   'dueDate', :null => false
-    t.date   'completionDate'
+
+  create_table "tasks", :force => true do |t|
+    t.string "title",          :limit => 25, :null => false
+    t.text   "note"
+    t.date   "dueDate",                      :null => false
+    t.date   "completionDate"
   end
+
 end
