@@ -1,5 +1,5 @@
 class TaskController < ApplicationController
-  before_filter :set_task, only: [:edit, :delete_confirmation]
+  before_filter :set_task, only: [:edit, :delete_confirmation, :complete]
 
   # GET /tasks/list
   def list
@@ -31,6 +31,14 @@ class TaskController < ApplicationController
     else
       render :new
     end
+  end
+
+  # POST /tasks/1/complete
+  def complete
+    @task.completionDate = Date.today
+    @task.save!
+
+    render :nothing => true, :status => 200, :content_type => 'text/html'
   end
 
   # POST /tasks/1

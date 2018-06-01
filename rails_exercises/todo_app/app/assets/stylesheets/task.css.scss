@@ -12,7 +12,7 @@
   margin-bottom: 1em;
 }
 
-.ud-icons i{
+.ud-icons i, .mark_completed i{
   font-size: 15px;
 }
 .fa-edit{
@@ -20,6 +20,9 @@
 }
 .fa-trash{
   color: red;
+}
+.fa-circle, .fa-check-circle{
+  color: green;
 }
 form .btn {
   margin-bottom: 2em;
@@ -34,4 +37,16 @@ form .btn {
 }
 #error_explanation{
   color: red;
+}
+form label:after {
+  content: ": "
+}
+form .field {
+  padding: 5px;
+}
+ul {
+  list-style-type: none;
+}
+.mark_completed form{
+  display: inline;
 }
