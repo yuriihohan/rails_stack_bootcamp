@@ -44,7 +44,7 @@ class TaskController < ApplicationController
   # POST /tasks/1
   def delete
     Task.destroy(params[:task][:id])
-    
+
     redirect_to action: 'list'
   end
 

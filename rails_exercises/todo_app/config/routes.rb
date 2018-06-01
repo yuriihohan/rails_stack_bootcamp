@@ -12,7 +12,7 @@ TodoApp::Application.routes.draw do
   post 'task/save'
 
   post 'task/complete'
-  
+
   post 'task/delete'
 
   # The priority is based upon order of creation:
