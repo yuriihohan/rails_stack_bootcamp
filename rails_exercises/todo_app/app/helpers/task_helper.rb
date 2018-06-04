@@ -6,20 +6,17 @@ module TaskHelper
   end
 
   def due_date_class(task)
-    unless task.completionDate.nil?
-      ''
+    return '' unless task.completionDate.nil?
+    days_left = task.days_left
+    if days_left >= 0 && days_left <= 5
+      'urgent'
+    elsif days_left > 5 && days_left < 15
+      'upcoming'
     else
-      days_left = task.days_left
-      if days_left >= 0 and days_left <= 5 
-        'urgent'
-      elsif days_left > 5 and days_left < 15  
-        'upcoming'
-      else
-        'low_prio'
-      end
+      'low_prio'
     end
   end
-  
+
   def save_url(task)
     if task.id.nil?
       'create'

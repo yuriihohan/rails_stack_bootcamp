@@ -12,11 +12,11 @@ class TaskController < ApplicationController
   end
 
   # GET /task/1/edit
-  def edit; end  
+  def edit; end
 
   def create
     @task = Task.new(task_params)
-    
+
     if @task.save
       redirect_to action: 'list'
     else
@@ -27,7 +27,7 @@ class TaskController < ApplicationController
   def update
     @task = Task.find(params[:task][:id])
     @task.update_attributes(task_params)
-    
+
     if @task.save
       redirect_to action: 'list'
     else
