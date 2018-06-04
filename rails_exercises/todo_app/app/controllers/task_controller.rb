@@ -1,31 +1,22 @@
 class TaskController < ApplicationController
   before_filter :set_task, only: [:edit, :delete_confirmation, :complete]
 
-  # GET /tasks/list
+  # GET /task/list
   def list
     @tasks = Task.all
   end
 
-  # GET /tasks/new
+  # GET /task/new
   def new
     @task = Task.new
   end
 
-  # GET /tasks/1/edit
-  def edit; end
+  # GET /task/1/edit
+  def edit; end  
 
-  # GET /tasks/1/delete_confirmation
-  def delete_confirmation; end
-
-  # POST /tasks
-  def save
-    if params[:task][:id].nil? || params[:task][:id] == ''
-      @task = Task.new(task_params)
-    else
-      @task = Task.find(params[:task][:id])
-      @task.update_attributes(task_params)
-    end
-
+  def create
+    @task = Task.new(task_params)
+    
     if @task.save
       redirect_to action: 'list'
     else
@@ -33,7 +24,21 @@ class TaskController < ApplicationController
     end
   end
 
-  # POST /tasks/1/complete
+  def update
+    @task = Task.find(params[:task][:id])
+    @task.update_attributes(task_params)
+    
+    if @task.save
+      redirect_to action: 'list'
+    else
+      render :new
+    end
+  end
+
+  # GET /task/delete_confirmation/?id=:id
+  def delete_confirmation; end
+
+  # POST /task/complete/?id=:id
   def complete
     @task.completionDate = Date.today
     @task.save!
@@ -41,7 +46,7 @@ class TaskController < ApplicationController
     render :nothing => true, :status => 200, :content_type => 'text/html'
   end
 
-  # POST /tasks/1
+  # POST /task/1/delete
   def delete
     Task.destroy(params[:task][:id])
 

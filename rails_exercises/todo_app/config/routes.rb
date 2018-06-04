@@ -1,18 +1,11 @@
 TodoApp::Application.routes.draw do
   root to: 'task#list'
 
-  get 'task/list'
-
-  get 'task/new'
-
-  get 'task/edit'
-
   get 'task/delete_confirmation'
-
-  post 'task/save'
-
   post 'task/complete'
 
+  resources :task, except: [:update, :delete, :show] #specifying delete and update as exceptions, since for it form submit is used
+  post 'task/update'
   post 'task/delete'
 
   # The priority is based upon order of creation:

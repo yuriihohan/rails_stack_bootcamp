@@ -19,4 +19,12 @@ module TaskHelper
       end
     end
   end
+  
+  def save_url(task)
+    if task.id.nil?
+      'create'
+    else
+      'update'
+    end
+  end
 end

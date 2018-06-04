@@ -1,6 +1,6 @@
 <h1 class="page_title">Confirm Task Deletion</h1>
 
-<%= form_for :task, method: :post, url: { action: "delete" } do |f| -%>
+<%= form_for :task, :url => url_for(:controller => 'task', :action => 'delete') do |f| -%>
   <%= f.hidden_field :id %>
   <%= f.submit 'Delete Task', :class => 'btn primary' %>
 <% end %>
