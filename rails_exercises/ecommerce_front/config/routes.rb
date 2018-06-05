@@ -1,4 +1,5 @@
 EcommerceFront::Application.routes.draw do
+  root to: 'frontpage#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
