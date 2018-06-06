@@ -11,19 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20180606082716) do
-  create_table 'feature_products', :force => true do |t|
-    t.string  'header', :limit => 50, :null => false
-    t.decimal 'price', :precision => 8, :scale => 2
+ActiveRecord::Schema.define(:version => 20180606083312) do
+
+  create_table "feature_products", :force => true do |t|
+    t.string  "header", :limit => 50,                               :null => false
+    t.decimal "price",                :precision => 8, :scale => 2
   end
 
-  create_table 'inspiration_blocks', :force => true do |t|
-    t.string 'header', :limit => 50, :null => false
-    t.string 'text', :null => false
+  create_table "inspiration_blocks", :force => true do |t|
+    t.string "header", :limit => 50, :null => false
+    t.string "text",                 :null => false
   end
 
-  create_table 'shipping_infos', :force => true do |t|
-    t.string 'header', :limit => 50, :null => false
-    t.string 'content', :null => false
+  create_table "shipping_infos", :force => true do |t|
+    t.string "header",  :limit => 50, :null => false
+    t.string "content",               :null => false
   end
+
+  create_table "slider_images", :force => true do |t|
+    t.string   "up_header",   :limit => 25, :null => false
+    t.string   "mid_header",  :limit => 25, :null => false
+    t.string   "button_text", :limit => 20, :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
 end

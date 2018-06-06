@@ -1,3 +1,9 @@
+PATH
+  remote: admin
+  specs:
+    admin (0.0.1)
+      rails (~> 3.2.22)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -115,6 +121,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  admin!
   autoprefixer-rails
   bootstrap-sass (= 3.2.0.2)
   coffee-rails (~> 3.2.1)
