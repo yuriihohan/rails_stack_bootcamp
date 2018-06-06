@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :title, null: false, :limit => 25
       t.text :note
       t.date :dueDate, null: false
-      t.date :completionDate
+      t.date :completion_date
     end
   end
 end

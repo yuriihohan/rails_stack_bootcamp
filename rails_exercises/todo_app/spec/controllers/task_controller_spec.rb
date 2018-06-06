@@ -26,9 +26,7 @@ describe TaskController do
 
   describe 'post to update task' do
     let(:task){
-      task = Task.new('title' => 'old title', 'dueDate' => Date.today)
-      task.save!
-      task
+      Task.create!('title' => 'old title', 'dueDate' => Date.today)
     }
 
     let(:validTaskParams) { { 'task' => { 'id' => task.id, 'title' => 'new valid task', 'dueDate' => Date.today } } }

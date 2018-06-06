@@ -6,7 +6,7 @@ module TaskHelper
   end
 
   def due_date_class(task)
-    return '' unless task.completionDate.nil?
+    return '' unless task.completion_date.nil?
     days_left = task.days_left
     if days_left >= 0 && days_left <= 5
       'urgent'

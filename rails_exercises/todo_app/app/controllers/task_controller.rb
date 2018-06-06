@@ -1,5 +1,5 @@
 class TaskController < ApplicationController
-  before_filter :set_task, only: [:edit, :delete_confirmation, :complete]
+  before_filter :set_task, only: [:delete_confirmation, :complete]
 
   # GET /task/list
   def list
@@ -12,7 +12,9 @@ class TaskController < ApplicationController
   end
 
   # GET /task/1/edit
-  def edit; end
+  def edit
+    @task = Task.find(params[:id])
+  end
 
   def create
     @task = Task.new(task_params)
@@ -40,7 +42,7 @@ class TaskController < ApplicationController
 
   # POST /task/complete/?id=:id
   def complete
-    @task.completionDate = Date.today
+    @task.completion_date = Date.today
     @task.save!
 
     render :nothing => true, :status => 200, :content_type => 'text/html'
@@ -56,7 +58,7 @@ class TaskController < ApplicationController
   private
 
   def set_task
-    @task = Task.find(params[:id])
+    @task = Task.find(params[:task_id])
   end
 
   def task_params
