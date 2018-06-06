@@ -383,9 +383,10 @@
 	<!-- Shipping -->
 	<section class="shipping bgwhite p-t-62 p-b-46">
 		<div class="flex-w p-l-15 p-r-15">
-		    <%= render partial: "shipping_flex", locals: { header: 'Free Delivery Worldwide', content: 'Click here for more info' } %>
-			<%= render partial: "shipping_flex", locals: { header: '30 Days Return', content: 'Simply return it within 30 days for an exchange.' } %>
-			<%= render partial: "shipping_flex", locals: { header: 'Free Delivery Worldwide', content: 'Click here for more info' } %>
+            <% @shipping_info_blocks.each do |info_block| %>
+		        <%= render partial: "shipping_flex", locals: { header: info_block.header, content: info_block.content } %>
+	        
+            <% end %>
 		</div>
 	</section>
 
