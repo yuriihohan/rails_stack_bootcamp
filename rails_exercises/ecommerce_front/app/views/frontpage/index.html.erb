@@ -22,51 +22,9 @@
 	<%= javascript_include_tag "vendor/countdowntime.js" %>
 	<%= javascript_include_tag "vendor/lightbox.min.js" %>
 	<%= javascript_include_tag "vendor/sweetalert.min.js" %>
-	<!-- Header -->
-	<header class="header1">
-		<!-- Header desktop -->
-		<div class="container-menu-header">
-			<div class="topbar">
-				<span class="topbar-child1">
-					Free shipping for standard order over $100
-				</span>
-			</div>
 
-			<div class="wrap_header">
-				<!-- Logo -->
-				<a href="index.html" class="logo">
-					<img src="assets/icons/logo.png" alt="IMG-LOGO">
-				</a>
+	<%= render partial: "header" %> 
 
-				<!-- Menu -->
-				<div class="wrap_menu">
-					<nav class="menu">
-						<ul class="main_menu">
-							<li>
-								<a href="index.html">Home</a>
-							</li>
-							<li>
-								<a href="product.html">Shop</a>
-							</li>
-							<li>
-								<a href="about.html">About</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-
-				<!-- Header Icon -->
-				<div class="header-icons">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="assets/icons/icon-header.png" class="header-icon1" alt="ICON">
-					</a>
-				</div>
-			</div>
-		</div>
-
-	</header>
-
-	<!-- Slide1 -->
 	<section class="slide1">
 		<div class="wrap-slick1">
 			<div class="slick1">
@@ -78,7 +36,6 @@
 			</div>
 		</div>
 	</section>
-
 
 	<!-- New Product -->
 	<section class="newproduct bgwhite p-t-45 p-b-105">
@@ -100,8 +57,6 @@
 			</div>
 		</div>
 	</section>
-
-
 
 	<!-- Blog -->
 	<section class="blog bgwhite p-t-94 p-b-65">
@@ -130,128 +85,7 @@
 		</div>
 	</section>
 
-
-	<!-- Footer -->
-	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
-		<div class="flex-w p-b-90">
-			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
-				<h4 class="s-text12 p-b-30">
-					GET IN TOUCH
-				</h4>
-
-				<div>
-					<p class="s-text7 w-size27">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-					</p>
-				</div>
-			</div>
-
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
-					Categories
-				</h4>
-
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Men
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Women
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Dresses
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Sunglasses
-						</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
-					Links
-				</h4>
-
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Search
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							About Us
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Contact Us
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Returns
-						</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
-					Help
-				</h4>
-
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Track Order
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Returns
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Shipping
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							FAQs
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="t-center p-l-15 p-r-15">
-
-			<div class="t-center s-text8 p-t-20">
-				Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-			</div>
-		</div>
-	</footer>
-
-
+	<%= render partial: "footer" %>
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
@@ -262,7 +96,5 @@
 
 	<!-- Container Selection1 -->
 	<div id="dropDownSelect1"></div>
-
-
 
 </div>
