@@ -4,8 +4,6 @@ class CreateSliderImages < ActiveRecord::Migration
       t.string :up_header, null: false, :limit => 25
       t.string :mid_header, null: false, :limit => 25
       t.string :button_text, null: false, :limit => 20
-
-      t.timestamps
     end
   end
 end
