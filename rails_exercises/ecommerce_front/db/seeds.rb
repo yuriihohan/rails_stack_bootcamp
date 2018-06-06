@@ -8,3 +8,10 @@
 ShippingInfo.create([{ content: 'Free Delivery Worldwide', header: 'Click here for more info' },
                      { content: '30 Days Return', header: 'Simply return it within 30 days for an exchange.' },
                      { content: 'Store Opening', header: 'Shop open from Monday to Sunday' }])
+
+InspirationBlock.create([{ header: 'Black Friday Guide: Best Sales & Discount Cod',
+                           text: 'Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames' },
+                         { header: 'The White Sneakers Nearly Every Fashion Girls Own',
+                           text: 'Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit ame' },
+                         { header: 'New York SS 2018 Street Style: Annina Mislin',
+                           text: 'Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc' }])
