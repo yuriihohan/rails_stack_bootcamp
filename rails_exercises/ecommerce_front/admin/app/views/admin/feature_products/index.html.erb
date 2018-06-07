@@ -1,0 +1,28 @@
+<h1>Configure Feature Product Section</h1>
+
+<div class = "links">
+  <%= link_to "Add Feature Product", new_feature_product_path %>
+</div>
+<ul>
+  <% @feature_products.each do |feature_product| %>
+    <li>
+      <div>
+        <div class = "contents">
+          <span><strong> <%= feature_product.header %></strong></span> |
+          <span> <%= feature_product.price %></span> $
+        </div>
+
+        <div class = "controls">
+          <span class = "ud-icons">
+             <%= link_to edit_feature_product_path(feature_product) do %>
+               <i class='far fa-edit'></i>
+             <% end %>
+             <%= link_to feature_product_delete_confirmation_path(feature_product) do %>
+               <i class='fas fa-trash'></i>
+             <% end %>
+          </span>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

@@ -48,7 +48,7 @@
 			<div class="wrap-slick2">
 				<div class="slick2">
 	            <% @feature_products.each do |feature_product| %>
-		            <%= render partial: "feature_product", locals: { header: feature_product.header, price: feature_product.price } %>            
+		            <%= render partial: "feature_product", locals: { feature_product: feature_product } %>            
                 <% end %>
 				</div>
 			</div>

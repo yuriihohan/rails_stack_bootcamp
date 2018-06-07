@@ -18,15 +18,17 @@ InspirationBlock.create([{ header: 'Black Friday Guide: Best Sales & Discount Co
                            text: 'Proin nec vehicula lorem, a efficitur ex. Nam vehicula nulla vel erat tincidunt, sed hendrerit ligula porttitor. Fusce sit amet maximus nunc' }])
 # rubocop:enable Metrics/LineLength
 
-FeatureProduct.create([{ header: 'Herschel supply co 25l', price: 75.00 },
-                       { header: 'Denim jacket blue', price: 92.00 },
-                       { header: 'Coach slim easton black', price: 165.90 },
-                       { header: 'Frayed denim shorts', price: 165.90 },
-                       { header: 'Herschel supply co 25l', price: 75.00 },
-                       { header: 'Denim jacket blue', price: 92.00 },
-                       { header: 'Coach slim easton black', price: 165.90 },
-                       { header: 'Frayed denim shorts', price: 165.90 }])
+feature_product_image = File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'item.jpg'))
+FeatureProduct.create([{ header: 'Herschel supply co 25l', price: 75.00, image: feature_product_image  },
+                       { header: 'Denim jacket blue', price: 92.00, image: feature_product_image  },
+                       { header: 'Coach slim easton black', price: 165.90, image: feature_product_image  },
+                       { header: 'Frayed denim shorts', price: 165.90, image: feature_product_image  },
+                       { header: 'Herschel supply co 25l', price: 75.00, image: feature_product_image  },
+                       { header: 'Denim jacket blue', price: 92.00, image: feature_product_image  },
+                       { header: 'Coach slim easton black', price: 165.90, image: feature_product_image  },
+                       { header: 'Frayed denim shorts', price: 165.90, image: feature_product_image  }])
 
-SliderImage.create([{ up_header: 'Women Collection 2018', mid_header: 'New Arrivals', button_text: 'Shop Now', image: File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'master-slide.jpg')) },
-                    { up_header: 'Women Collection 2019', mid_header: 'New Arrivals', button_text: 'Shop Now', image: File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'master-slide.jpg')) },
-                    { up_header: 'Women Collection 2020', mid_header: 'New Arrivals', button_text: 'Shop Now', image: File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'master-slide.jpg')) }])
+                       image_file = File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'master-slide.jpg'))
+SliderImage.create([{ up_header: 'Women Collection 2018', mid_header: 'New Arrivals', button_text: 'Shop Now', image: image_file },
+                    { up_header: 'Women Collection 2019', mid_header: 'New Arrivals', button_text: 'Shop Now', image: image_file },
+                    { up_header: 'Women Collection 2020', mid_header: 'New Arrivals', button_text: 'Shop Now', image: image_file }])

@@ -1,0 +1,29 @@
+  <% if @feature_product.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@feature_product.errors.count, "error") %> prohibited
+      this Feature Product from being saved:
+    </h2>
+    <ul>
+      <% @feature_product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+<%= form_for @feature_product, :html => { :multipart => true } do |f| -%>
+  <div class="field">
+    <%= f.label :header %>
+    <%= f.text_field :header, class: 'input-xxlarge' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.number_field :price,  step: 0.01, class: 'input-xxlarge' %>
+  </div>
+  <div class="field">
+    <%= f.file_field :image %>
+  </div>
+  <%= f.submit 'Save Feature Product', :class => 'btn primary' %>
+<% end %>

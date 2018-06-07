@@ -1,0 +1,9 @@
+<h1 class="page_title">Confirm Feature Product Deletion</h1>
+
+<%= form_for @feature_product, :html => { :method => :delete } do |f| -%>
+  <%= f.submit 'Delete Feature Product', :class => 'btn primary' %>
+<% end %>
+
+<div class="links">
+  <%= link_to "Back", feature_products_path %>
+</div>
