@@ -27,6 +27,6 @@ FeatureProduct.create([{ header: 'Herschel supply co 25l', price: 75.00 },
                        { header: 'Coach slim easton black', price: 165.90 },
                        { header: 'Frayed denim shorts', price: 165.90 }])
 
-SliderImage.create([{ up_header: 'Women Collection 2018', mid_header: 'New Arrivals', button_text: 'Shop Now' },
-                    { up_header: 'Women Collection 2019', mid_header: 'New Arrivals', button_text: 'Shop Now' },
-                    { up_header: 'Women Collection 2020', mid_header: 'New Arrivals', button_text: 'Shop Now' }])
+SliderImage.create([{ up_header: 'Women Collection 2018', mid_header: 'New Arrivals', button_text: 'Shop Now', image: File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'master-slide.jpg')) },
+                    { up_header: 'Women Collection 2019', mid_header: 'New Arrivals', button_text: 'Shop Now', image: File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'master-slide.jpg')) },
+                    { up_header: 'Women Collection 2020', mid_header: 'New Arrivals', button_text: 'Shop Now', image: File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'master-slide.jpg')) }])

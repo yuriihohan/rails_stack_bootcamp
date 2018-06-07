@@ -29,9 +29,7 @@
 		<div class="wrap-slick1">
 			<div class="slick1">
 	            <% @slider_images.each do |slider_image| %>
-					<%= render partial: "slider_image", locals: { up_header: slider_image.up_header,
-					                                                 mid_header: slider_image.mid_header,
-					                                                 button_text: slider_image.button_text } %>   
+					<%= render partial: "slider_image", locals: { slider_image: slider_image} %>   
                 <% end %>
 			</div>
 		</div>
