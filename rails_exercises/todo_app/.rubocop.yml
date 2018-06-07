@@ -1,0 +1,10 @@
+Style/Documentation:
+  Enabled: false
+Style/ExpandPathArguments:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Style/SymbolArray:
+  EnforcedStyle: brackets
+Style/FrozenStringLiteralComment:
+  Enabled: false

@@ -1,0 +1,76 @@
+// Place all the styles related to the task controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.done{
+  text-decoration: line-through;
+}
+.task-title {
+  width: 30%;
+  float: left;
+}
+.task_body {
+  margin-bottom: 1em;
+}
+
+.ud-icons i, .mark_completed i{
+  font-size: 15px;
+}
+.fa-edit{
+  color: green; 
+}
+.fa-trash{
+  color: red;
+}
+.fa-circle, .fa-check-circle{
+  color: green;
+}
+form .btn {
+  margin-bottom: 2em;
+}
+.field_with_errors{
+  display: inline;
+  color: red;
+}
+.field_with_errors input{
+  background-color: pink;
+  border-color: #C00000;
+}
+#error_explanation{
+  color: red;
+}
+form label:after {
+  content: ": "
+}
+form .field {
+  padding: 5px;
+}
+ul {
+  list-style-type: none;
+}
+.mark_completed form{
+  display: inline;
+}
+.taskBox {
+  display: inline-block;
+  width: 30%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dueDateBox{
+  display: inline-block;
+  width: 10%;
+  white-space: nowrap;
+}
+.task_body.urgent{
+  background-color: orange;
+}
+.task_body.upcoming{
+  background-color: yellow;
+}
+.task_body.low_prio{
+  background-color: lightgoldenrodyellow;
+}
+a{
+  text-decoration: none;
+}
