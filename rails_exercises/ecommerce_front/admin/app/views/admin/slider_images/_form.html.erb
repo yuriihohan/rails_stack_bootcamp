@@ -1,0 +1,30 @@
+  <% if @slider_image.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@slider_image.errors.count, "error") %> prohibited
+      this Slider Image from being saved:
+    </h2>
+    <ul>
+      <% @slider_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+<%= form_for @slider_image do |f| -%>
+  <div class="field">
+    <%= f.label :button_text %>
+    <%= f.text_field :button_text, class: 'input-xxlarge' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mid_header %>
+    <%= f.text_field :mid_header, class: 'input-xxlarge' %>
+  </div>
+  <div class="field">
+    <%= f.label :up_header %>
+    <%= f.text_field :up_header, class: 'input-xxlarge' %>
+  </div>
+  <%= f.submit 'Save Slider Image', :class => 'btn primary' %>
+<% end %>

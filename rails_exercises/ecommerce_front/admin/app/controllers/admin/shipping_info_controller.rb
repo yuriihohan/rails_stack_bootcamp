@@ -7,7 +7,6 @@ module Admin
     end
 
     def edit
-      puts params
       @shipping_info = ShippingInfo.find(params[:format])
     end
 

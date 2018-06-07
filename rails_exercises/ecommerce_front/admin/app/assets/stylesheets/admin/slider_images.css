@@ -2,21 +2,10 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-.ud-icons i{
-  font-size: 15px;
-  color:green;
-}
-ul {
-  list-style-type: none;
-}
-.controls { 
+.contents {
   display: inline-block;
+  width: 50%;
   white-space: nowrap;
   overflow: hidden;
-}
-#error_explanation{
-  color: red;
-}
-a{
-  text-decoration: none;
+  text-overflow: ellipsis;
 }

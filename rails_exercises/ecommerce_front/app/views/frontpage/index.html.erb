@@ -50,8 +50,7 @@
 			<div class="wrap-slick2">
 				<div class="slick2">
 	            <% @feature_products.each do |feature_product| %>
-		            <%= render partial: "feature_product", locals: { header: feature_product.header, price: feature_product.price } %>
-	            
+		            <%= render partial: "feature_product", locals: { header: feature_product.header, price: feature_product.price } %>            
                 <% end %>
 				</div>
 			</div>
@@ -68,8 +67,7 @@
 			</div>
             <div class="row">
 			    <% @inspiration_blocks.each do |inspiration_block| %>
-		            <%= render partial: "inspire_block", locals: { header: inspiration_block.header, text: inspiration_block.text } %>
-	            
+		            <%= render partial: "inspire_block", locals: { header: inspiration_block.header, text: inspiration_block.text } %>        
                 <% end %>
 			</div>
 		</div>
