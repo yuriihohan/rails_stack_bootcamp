@@ -10,14 +10,13 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended to check this file into your version control system.
-
+# rubocop:disable Style/StringLiterals, Style/HashSyntax, Layout/ExtraSpacing
 ActiveRecord::Schema.define(:version => 20180530090540) do
-
   create_table "tasks", :force => true do |t|
     t.string "title",           :limit => 25, :null => false
     t.text   "note"
     t.date   "dueDate",                       :null => false
     t.date   "completion_date"
   end
-
 end
+# rubocop:enable Style/StringLiterals, Style/HashSyntax, Layout/ExtraSpacing

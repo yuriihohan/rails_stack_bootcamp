@@ -25,7 +25,7 @@ describe TasksController do
   end
 
   describe 'post to update task' do
-    let(:task){
+    let(:task) {
       Task.create!('title' => 'old title', 'dueDate' => Date.today)
     }
 

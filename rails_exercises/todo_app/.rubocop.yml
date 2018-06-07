@@ -8,5 +8,3 @@ Style/SymbolArray:
   EnforcedStyle: brackets
 Style/FrozenStringLiteralComment:
   Enabled: false
-Style/HashSyntax:
-  Enabled: false
