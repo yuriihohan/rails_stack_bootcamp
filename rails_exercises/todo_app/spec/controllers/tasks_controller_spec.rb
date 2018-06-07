@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe TaskController do
+describe TasksController do
   describe 'post to create task' do
     let(:validTaskParams) { { 'task' => { 'title' => 'new valid task', 'dueDate' => Date.today } } }
     let(:invalidTaskParams) { { 'task' => { 'title' => nil, 'dueDate' => Date.today } } }
-    let(:taskController) { TaskController.new }
+    let(:taskController) { TasksController.new }
 
     context 'when task is valid' do
       it 'should render list page' do

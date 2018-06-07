@@ -1,4 +1,4 @@
-class TaskController < ApplicationController
+class TasksController < ApplicationController
   before_filter :set_task, only: [:delete_confirmation, :complete]
 
   # GET /task/list
@@ -27,7 +27,7 @@ class TaskController < ApplicationController
   end
 
   def update
-    @task = Task.find(params[:task][:id])
+    @task = Task.find(params[:id])
     @task.update_attributes(task_params)
 
     if @task.save
@@ -49,8 +49,8 @@ class TaskController < ApplicationController
   end
 
   # POST /task/1/delete
-  def delete
-    Task.destroy(params[:task][:id])
+  def destroy
+    Task.destroy(params[:id])
 
     redirect_to action: 'list'
   end

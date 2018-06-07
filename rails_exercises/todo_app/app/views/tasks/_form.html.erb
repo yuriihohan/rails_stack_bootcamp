@@ -12,8 +12,7 @@
   </div>
   <% end %>
 
-<%= form_for :task, :url => url_for(:controller => 'task', :action => save_url(@task), :task_id => task.id) do |f| -%>
-  <%= f.hidden_field :id %>
+<%= form_for @task do |f| -%>
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'input-xxlarge' %>

@@ -1,0 +1,8 @@
+<h1 class="page_title">Confirm Task Deletion</h1>
+
+<%= form_for @task, :html => { :method => :delete } do |f| -%>
+  <%= f.submit 'Delete Task', :class => 'btn primary' %>
+<% end %>
+<div class="links">
+  <%= link_to "Back", root_path %>
+</div>

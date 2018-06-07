@@ -7,7 +7,7 @@
    <% @tasks.each do |task| %>
     <li>
       <div class="task_body <%= due_date_class task%>">
-        <%= link_to "<i class='far fa-circle'></i>".html_safe, {:controller => :task, :action => :complete, :task_id => task.id,}, 
+        <%= link_to "<i class='far fa-circle'></i>".html_safe, task_complete_path(task), 
                                                                 :class => 'completeTaskBtn' if task.completion_date.nil? %>
         <%= "<i class='far fa-check-circle'></i>".html_safe unless task.completion_date.nil? %>
         <div class ="taskBox">
@@ -18,8 +18,8 @@
           <strong> (<%= task.dueDate %>) </strong>
         </div>
         <span class = "ud-icons">
-          <%= link_to "<i class='far fa-edit'></i>".html_safe,  :controller => :task, :action => :edit, :id => task.id  %>
-          <%= link_to "<i class='fas fa-trash'></i>".html_safe, :controller => :task, :action => :delete_confirmation, :task_id => task.id  %>
+          <%= link_to "<i class='far fa-edit'></i>".html_safe,  edit_task_path(task) %>
+          <%= link_to "<i class='fas fa-trash'></i>".html_safe, task_delete_confirmation_path(task) %>
         </span>
       </div>
     </li>
