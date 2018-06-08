@@ -1,0 +1,28 @@
+<h1>Configure Inspiration Blocks Section</h1>
+
+<div class = "links">
+  <%= link_to "Add Inspiration Block", new_inspiration_block_path %>
+</div>
+<ul>
+  <% @inspiration_blocks.each do |inspiration_block| %>
+    <li>
+      <div>
+        <div class = "contents">
+          <span><strong> <%= inspiration_block.header %></strong></span> |
+          <span> <%= inspiration_block.text %></span>
+        </div>
+
+        <div class = "controls">
+          <span class = "ud-icons">
+             <%= link_to edit_inspiration_block_path(inspiration_block) do %>
+               <i class='far fa-edit'></i>
+             <% end %>
+             <%= link_to inspiration_block_delete_confirmation_path(inspiration_block) do %>
+               <i class='fas fa-trash'></i>
+             <% end %>
+          </span>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

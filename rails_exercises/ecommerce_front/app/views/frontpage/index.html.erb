@@ -65,7 +65,7 @@
 			</div>
             <div class="row">
 			    <% @inspiration_blocks.each do |inspiration_block| %>
-		            <%= render partial: "inspire_block", locals: { header: inspiration_block.header, text: inspiration_block.text } %>        
+		            <%= render partial: "inspire_block", locals: { inspiration_block: inspiration_block } %>        
                 <% end %>
 			</div>
 		</div>

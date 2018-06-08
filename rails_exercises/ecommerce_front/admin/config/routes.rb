@@ -1,9 +1,13 @@
 Admin::Engine.routes.draw do
+  resources :slider_images, except: :show do
+    get :delete_confirmation
+  end
+
   resources :feature_products, except: :show do
     get :delete_confirmation
   end
 
-  resources :slider_images, except: :show do
+  resources :inspiration_blocks, except: :show do
     get :delete_confirmation
   end
 

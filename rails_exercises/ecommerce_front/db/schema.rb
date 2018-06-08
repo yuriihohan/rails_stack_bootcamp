@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(:version => 20180606083312) do
   end
 
   create_table "inspiration_blocks", :force => true do |t|
-    t.string "header", :limit => 50, :null => false
-    t.string "text",                 :null => false
+    t.string   "header",             :limit => 50, :null => false
+    t.string   "text",                             :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "shipping_infos", :force => true do |t|
