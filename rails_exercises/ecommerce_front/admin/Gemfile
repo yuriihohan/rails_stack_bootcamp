@@ -6,7 +6,6 @@ source 'https://rubygems.org'
 gemspec
 
 # jquery-rails is used by the dummy application
-gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'paperclip', '~> 4.3'
 # Declare any dependencies that are still in development here instead of in

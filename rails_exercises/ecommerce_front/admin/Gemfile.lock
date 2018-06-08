@@ -41,8 +41,6 @@ GEM
       climate_control (>= 0.0.3, < 1.0)
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
-    font-awesome-rails (4.7.0.4)
-      railties (>= 3.2, < 6.0)
     hike (1.2.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -107,7 +105,6 @@ PLATFORMS
 
 DEPENDENCIES
   admin!
-  font-awesome-rails
   jquery-rails
   paperclip (~> 4.3)
   sqlite3
