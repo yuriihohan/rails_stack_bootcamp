@@ -49,7 +49,7 @@ module Admin
     end
 
     def slider_image_params
-      params[:slider_image]
+      params[:slider_image].slice(:button_text, :mid_header, :up_header, :image, :filename, :original_filename, :content_type)
     end
   end
 end

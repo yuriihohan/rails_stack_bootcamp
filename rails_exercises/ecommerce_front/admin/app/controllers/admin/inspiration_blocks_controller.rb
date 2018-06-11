@@ -49,7 +49,7 @@ module Admin
     end
 
     def inspiration_block_params
-      params[:inspiration_block]
+      params[:inspiration_block].slice(:header, :text, :image, :filename, :original_filename, :content_type)
     end
   end
 end

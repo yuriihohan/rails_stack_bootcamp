@@ -49,7 +49,7 @@ module Admin
     end
 
     def feature_product_params
-      params[:feature_product]
+      params[:feature_product].slice(:header, :price, :image, :filename, :original_filename, :content_type)
     end
   end
 end
