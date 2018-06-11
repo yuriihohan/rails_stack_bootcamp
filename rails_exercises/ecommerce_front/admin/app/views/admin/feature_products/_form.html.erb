@@ -23,8 +23,7 @@
     <%= f.number_field :price,  step: 0.01, class: 'input-xxlarge' %>
   </div>
   <div class="field">
-    <%= f.file_field :image, class: 'new_upload'  if @feature_product.id.nil?%>
-    <%= f.file_field :image, class: 're_upload'  unless @feature_product.id.nil?%>
+    <%= f.file_field :image, class: (@feature_product.persisted? ? 're_upload' : 'new_upload') %>
     <%= f.label :image, @feature_product.image.original_filename, class: 'plain_label' unless @feature_product.id.nil? %>
   </div>
   <%= f.submit 'Save Feature Product', :class => 'btn primary' %>

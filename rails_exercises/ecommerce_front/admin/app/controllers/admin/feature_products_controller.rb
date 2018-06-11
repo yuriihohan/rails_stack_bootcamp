@@ -25,9 +25,7 @@ module Admin
     def edit; end
 
     def update
-      @feature_product.update_attributes(feature_product_params)
-
-      if @feature_product.save
+      if @feature_product.update_attributes(feature_product_params)
         redirect_to action: 'index'
       else
         render :new

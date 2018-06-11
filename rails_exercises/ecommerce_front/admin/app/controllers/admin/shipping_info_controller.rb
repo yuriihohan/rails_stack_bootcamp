@@ -12,9 +12,8 @@ module Admin
 
     def update
       @shipping_info = ShippingInfo.find(params[:shipping_info][:id])
-      @shipping_info.update_attributes(params[:shipping_info])
 
-      if @shipping_info.save
+      if @shipping_info.update_attributes(params[:shipping_info])
         redirect_to action: 'index'
       else
         render :edit

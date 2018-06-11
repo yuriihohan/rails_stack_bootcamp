@@ -6,7 +6,9 @@
       <div>
         <div class = "controls">
           <span class = "ud-icons">
-            <%= link_to "<i class='far fa-edit'></i>".html_safe, shipping_info_edit_path(info_block) %>
+            <%= link_to shipping_info_edit_path(info_block) do %>
+              <i class='far fa-edit'></i>
+            <% end %>
           </span>
         </div>
         <div class = "contents">

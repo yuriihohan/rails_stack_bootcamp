@@ -27,8 +27,7 @@
     <%= f.text_field :up_header, class: 'input-xxlarge' %>
   </div>
   <div class="field">
-    <%= f.file_field :image, class: 'new_upload'  if @slider_image.id.nil?%>
-    <%= f.file_field :image, class: 're_upload'  unless @slider_image.id.nil?%>
+    <%= f.file_field :image, class: (@slider_image.persisted? ? 're_upload' : 'new_upload') %>
     <%= f.label :image, @slider_image.image.original_filename, class: 'plain_label' unless @slider_image.id.nil? %>
   </div>
   <%= f.submit 'Save Slider Image', :class => 'btn primary' %>

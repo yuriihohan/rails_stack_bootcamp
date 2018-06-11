@@ -25,9 +25,7 @@ module Admin
     def edit; end
 
     def update
-      @inspiration_block.update_attributes(inspiration_block_params)
-
-      if @inspiration_block.save
+      if @inspiration_block.update_attributes(inspiration_block_params)
         redirect_to action: 'index'
       else
         render :new

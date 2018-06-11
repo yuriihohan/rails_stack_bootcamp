@@ -25,9 +25,7 @@ module Admin
     def edit; end
 
     def update
-      @slider_image.update_attributes(slider_image_params)
-
-      if @slider_image.save
+      if @slider_image.update_attributes(slider_image_params)
         redirect_to action: 'index'
       else
         render :new
@@ -37,7 +35,7 @@ module Admin
     def delete_confirmation
       @slider_image = SliderImage.find(params[:slider_image_id])
     end
-    
+
     def destroy
       SliderImage.destroy(params[:id])
 
