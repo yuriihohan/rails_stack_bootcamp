@@ -20,16 +20,19 @@ InspirationBlock.create([{ header: 'Black Friday Guide: Best Sales & Discount Co
 # rubocop:enable Metrics/LineLength
 
 feature_product_image = File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'item.jpg'))
-FeatureProduct.create([{ header: 'Herschel supply co 25l', price: 75.00, image: feature_product_image  },
-                       { header: 'Denim jacket blue', price: 92.00, image: feature_product_image  },
-                       { header: 'Coach slim easton black', price: 165.90, image: feature_product_image  },
-                       { header: 'Frayed denim shorts', price: 165.90, image: feature_product_image  },
-                       { header: 'Herschel supply co 25l', price: 75.00, image: feature_product_image  },
-                       { header: 'Denim jacket blue', price: 92.00, image: feature_product_image  },
-                       { header: 'Coach slim easton black', price: 165.90, image: feature_product_image  },
-                       { header: 'Frayed denim shorts', price: 165.90, image: feature_product_image  }])
+FeatureProduct.create([{ header: 'Herschel supply co 25l', price: 75.00, image: feature_product_image },
+                       { header: 'Denim jacket blue', price: 92.00, image: feature_product_image },
+                       { header: 'Coach slim easton black', price: 165.90, image: feature_product_image },
+                       { header: 'Frayed denim shorts', price: 165.90, image: feature_product_image },
+                       { header: 'Herschel supply co 25l', price: 75.00, image: feature_product_image },
+                       { header: 'Denim jacket blue', price: 92.00, image: feature_product_image },
+                       { header: 'Coach slim easton black', price: 165.90, image: feature_product_image },
+                       { header: 'Frayed denim shorts', price: 165.90, image: feature_product_image }])
 
 image_file = File.new(Rails.root.join(Rails.root, 'app', 'assets', 'images', 'master-slide.jpg'))
-SliderImage.create([{ up_header: 'Women Collection 2018', mid_header: 'New Arrivals', button_text: 'Shop Now', image: image_file },
-                    { up_header: 'Women Collection 2019', mid_header: 'New Arrivals', button_text: 'Shop Now', image: image_file },
-                    { up_header: 'Women Collection 2020', mid_header: 'New Arrivals', button_text: 'Shop Now', image: image_file }])
+SliderImage.create([{ up_header: 'Women Collection 2018', mid_header: 'New Arrivals',
+                      button_text: 'Shop Now', image: image_file },
+                    { up_header: 'Women Collection 2019', mid_header: 'New Arrivals',
+                      button_text: 'Shop Now', image: image_file },
+                    { up_header: 'Women Collection 2020', mid_header: 'New Arrivals',
+                      button_text: 'Shop Now', image: image_file }])

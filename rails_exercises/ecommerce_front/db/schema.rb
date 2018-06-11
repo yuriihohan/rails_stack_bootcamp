@@ -45,5 +45,4 @@ ActiveRecord::Schema.define(:version => 20180606083312) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
-
 end

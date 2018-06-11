@@ -1,4 +1,4 @@
-require_dependency "admin/application_controller"
+require_dependency 'admin/application_controller'
 
 module Admin
   class SliderImagesController < ApplicationController
@@ -49,7 +49,8 @@ module Admin
     end
 
     def slider_image_params
-      params[:slider_image].slice(:button_text, :mid_header, :up_header, :image, :filename, :original_filename, :content_type)
+      params[:slider_image].slice(:button_text, :mid_header, :up_header,
+                                  :image, :filename, :original_filename, :content_type)
     end
   end
 end
