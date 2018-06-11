@@ -23,7 +23,9 @@
     <%= f.text_area :text, cols: 40, rows: 5, class: 'input-xxlarge' %>
   </div>
   <div class="field">
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class: 'new_upload'  if @inspiration_block.id.nil?%>
+    <%= f.file_field :image, class: 're_upload'  unless @inspiration_block.id.nil?%>
+    <%= f.label :image, @inspiration_block.image.original_filename, class: 'plain_label' unless @inspiration_block.id.nil? %>
   </div>
   <%= f.submit 'Save Inspiration Block', :class => 'btn primary' %>
 <% end %>
