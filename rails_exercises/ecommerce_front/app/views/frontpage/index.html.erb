@@ -1,0 +1,96 @@
+
+<div class="animsition">
+    <%= stylesheet_link_tag "vendor/font-awesome.min.css" %>
+	<%= stylesheet_link_tag "vendor/themify-icons.css" %>
+	<%= stylesheet_link_tag "vendor/icon-font.min.css" %>
+	<%= stylesheet_link_tag "vendor/style.css" %>
+	<%= stylesheet_link_tag "vendor/animate.css" %>
+	<%= stylesheet_link_tag "vendor/hamburgers.min.css" %>
+	<%= stylesheet_link_tag "vendor/animsition/css/animsition.min.css" %>
+	<%= stylesheet_link_tag "vendor/select2.min.css" %>
+	<%= stylesheet_link_tag "vendor/daterangepicker.css" %>
+	<%= stylesheet_link_tag "vendor/slick.css" %>
+	<%= stylesheet_link_tag "vendor/lightbox.min.css" %>
+	<%= stylesheet_link_tag "util.css" %>
+	<%= stylesheet_link_tag "main.css" %>
+	<%= javascript_include_tag "vendor/animsition/js/animsition.js" %>
+	<%= javascript_include_tag "vendor/popper.js" %>
+	<%= javascript_include_tag "vendor/bootstrap.min.js" %>
+	<%= javascript_include_tag "vendor/select2.min.js" %>
+	<%= javascript_include_tag "vendor/slick.min.js" %>
+	<%= javascript_include_tag "vendor/slick-custom.js" %>
+	<%= javascript_include_tag "vendor/countdowntime.js" %>
+	<%= javascript_include_tag "vendor/lightbox.min.js" %>
+	<%= javascript_include_tag "vendor/sweetalert.min.js" %>
+
+	<%= render partial: "header" %> 
+
+	<section class="slide1">
+		<div class="wrap-slick1">
+			<div class="slick1">
+	            <% @slider_images.each do |slider_image| %>
+					<%= render partial: "slider_image", locals: { slider_image: slider_image} %>   
+                <% end %>
+			</div>
+		</div>
+	</section>
+
+	<!-- New Product -->
+	<section class="newproduct bgwhite p-t-45 p-b-105">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center">
+					Featured Products
+				</h3>
+			</div>
+
+			<!-- Slide2 -->
+			<div class="wrap-slick2">
+				<div class="slick2">
+	            <% @feature_products.each do |feature_product| %>
+		            <%= render partial: "feature_product", locals: { feature_product: feature_product } %>            
+                <% end %>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Blog -->
+	<section class="blog bgwhite p-t-94 p-b-65">
+		<div class="container">
+			<div class="sec-title p-b-52">
+				<h3 class="m-text5 t-center">
+					Inspire
+				</h3>
+			</div>
+            <div class="row">
+			    <% @inspiration_blocks.each do |inspiration_block| %>
+		            <%= render partial: "inspire_block", locals: { inspiration_block: inspiration_block } %>        
+                <% end %>
+			</div>
+		</div>
+	</section>
+
+	<!-- Shipping -->
+	<section class="shipping bgwhite p-t-62 p-b-46">
+		<div class="flex-w p-l-15 p-r-15">
+            <% @shipping_info_blocks.each do |info_block| %>
+		        <%= render partial: "shipping_flex", locals: { header: info_block.header, content: info_block.content } %>
+	        
+            <% end %>
+		</div>
+	</section>
+
+	<%= render partial: "footer" %>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+
+</div>

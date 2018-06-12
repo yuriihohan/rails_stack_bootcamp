@@ -1,0 +1,9 @@
+<h1 class="page_title">Confirm Inspiration Block Deletion</h1>
+
+<%= form_for @inspiration_block, :html => { :method => :delete } do |f| -%>
+  <%= f.submit 'Delete  Inspiration Block', :class => 'btn primary' %>
+<% end %>
+
+<div class="links">
+  <%= link_to "Back", inspiration_blocks_path %>
+</div>
