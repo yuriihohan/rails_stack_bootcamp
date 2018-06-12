@@ -1,0 +1,22 @@
+<h1>Configure Shipping Info Section</h1>
+
+<ul>
+  <% @shipping_info_blocks.each do |info_block| %>
+    <li>
+      <div>
+        <div class = "controls">
+          <span class = "ud-icons">
+            <%= link_to shipping_info_edit_path(info_block) do %>
+              <i class='far fa-edit'></i>
+            <% end %>
+          </span>
+        </div>
+        <div class = "contents">
+          <span> <strong> Block: </strong> <%= info_block.id %>. </span>
+          <span> <%= info_block.header %></span>
+          <span> <%= info_block.content %></span>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

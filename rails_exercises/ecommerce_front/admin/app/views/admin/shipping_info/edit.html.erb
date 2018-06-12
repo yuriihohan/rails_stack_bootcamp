@@ -1,0 +1,34 @@
+<h1 class="form_title">Edit Shipping Block</h1> 
+
+  <% if @shipping_info.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@shipping_info.errors.count, "error") %> prohibited
+      this article from being saved:
+    </h2>
+    <ul>
+      <% @shipping_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+<%= form_for :shipping_info, :url => url_for(:controller => 'shipping_info', :action => 'update') do |f| -%>
+  <%= f.hidden_field :id %>
+  <div class="field">
+    <%= f.label :header %>
+    <%= f.text_field :header, class: 'input-xxlarge' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_field :content, class: 'input-xxlarge' %>
+  </div>
+  <%= f.submit 'Save Shipping Info', :class => 'btn primary' %>
+<% end %>
+
+
+<div class="links">
+  <%= link_to "Back", :controller => :shipping_info, :action => :index %>
+</div>

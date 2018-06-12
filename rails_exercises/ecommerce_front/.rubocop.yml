@@ -6,3 +6,5 @@ Metrics/LineLength:
   Max: 120
 Style/HashSyntax:
   Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false

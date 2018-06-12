@@ -1,0 +1,8 @@
+<h1 class="page_title">Confirm Slider Image Deletion</h1>
+
+<%= form_for @slider_image, :html => { :method => :delete } do |f| -%>
+  <%= f.submit 'Delete Slider Image', :class => 'btn primary' %>
+<% end %>
+<div class="links">
+  <%= link_to "Back", slider_images_path %>
+</div>
